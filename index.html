@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,7 +10,25 @@
     <link rel="stylesheet" href="style.css">
 
 </head>
+
 <body>
-    
+    <header class="header">
+        <h1>todos</h1>
+        <input class="new-todos" placeholder="What needs to be done?" autofocus>
+    </header>
+    <section class="main">
+        <input id="toggle-all" type="checkbox">
+        <ul class="todo-list">
+            <template id="todo-template">
+                <li class="todo-item">
+                    <input id="toggle-item" type="checkbox">
+                    <p class="todo-value"></p>
+                    <button class="todo-remove"></button>
+                </li>
+            </template>
+        </ul>
+    </section>
+
 </body>
+
 </html>
