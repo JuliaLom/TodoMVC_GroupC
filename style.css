@@ -1,0 +1,20 @@
+body
+{
+    background-color: rgb(243, 243, 243);
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+h1
+{
+    text-align: center;
+    color:rgb(233, 199, 199);
+    font-size: 120px;
+    margin: 20px;
+}
+
+footer
+{
+    text-align: center;
+    color: rgb(161, 161, 161);
+    font-size: small;
+}
