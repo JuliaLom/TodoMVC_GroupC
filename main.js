@@ -1,6 +1,7 @@
 let todos = "";
 let template = document.querySelector('#todo-template');
 start();
+
 function start(){
     template.remove();
     setSearchForm();
@@ -13,12 +14,13 @@ function setSearchForm() {
     form.onsubmit = function (event) {
         event.preventDefault();
         todos = newTodos.value; //global
-        addTodos()
+        addTodos();
+        form.reset();
     }
 }
 function addTodos() {
     let todoList = document.querySelector('#todo-list');
     let li = template.content.firstElementChild.cloneNode(true);
-    li.querySelector('.todo-value').textContent = todosItem;
+    li.querySelector('.todo-value').textContent = todos;
     todoList.append(li);
 }
