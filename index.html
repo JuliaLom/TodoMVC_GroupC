@@ -15,19 +15,20 @@
 
     <header class="header">
         <h1>todos</h1>
-        <div id="input">
+        <form id="form">
             <input id="toggle-all" type="checkbox">
             <input class="new-todos" placeholder="What needs to be done?" autofocus>
-        </div>
+            <button type="submit" id = submit-button></button>
+        </form>
         
     </header>
 
     <section class="main">
         
-        <ul class="todo-list">
+        <ul id="todo-list">
             <template id="todo-template">
                 <li class="todo-item">
-                    <input id="toggle-item" type="checkbox">
+                    <input class="toggle-item" type="checkbox">
                     <p class="todo-value"></p>
                     <button class="todo-remove">❌</button>
                 </li>

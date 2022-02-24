@@ -18,7 +18,7 @@ footer
     color: rgb(161, 161, 161);
     font-size: small;
 }
-#input{
+#search-form{
     display: flex;
     flex-direction: row;
     justify-content: center;
