@@ -12,18 +12,14 @@
 </head>
 
 <body>
-
     <header class="header">
         <h1>todos</h1>
+    </header>
+    <main>
         <form id="form">
             <input id="toggle-all" type="checkbox">
             <input id="new-todos" placeholder="What needs to be done?" autofocus>
-            <button type="submit" id = "submit-button"></button>
         </form>
-    </header>
-
-    <section class="main">
-        
         <ul id="todo-list">
             <template id="todo-template">
                 <li class="todo-item">
@@ -33,9 +29,24 @@
                 </li>
             </template>
         </ul>
-    </section>
+    </main>
+    <footer class="options">
+        <span class="todo-count"></span>
+        <ul class="filter-button">
+            <li>
+                <button type="button" class="all">All</a>
+            </li>
+            <li>
+                <button type="button" class="active">Active</a>
+            </li>
+            <li>
+                <button type="button" class="complete">Complete</a>
+            </li>
+        </ul>
+        <button type="button" class="clear-complete">Clear Complete</button>
+    </footer>
 
-    <footer>
+    <footer class="info">
         <p>Written by Michael, Julia and Rano</p>
     </footer>
 
