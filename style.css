@@ -98,7 +98,7 @@ h1
     display: grid;
     grid-column: 2/5;
     grid-template-columns: 1fr 2fr 1fr;
-    background-color: rgb(30, 71, 90);
+    background-color: white;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
@@ -111,9 +111,10 @@ h1
 {
     grid-column: 2;
     display: flex;
-    list-style-type: none;
     flex-direction: row;
-    margin: 0px 4px 0px 4px
+    list-style-type: none;
+    justify-content: space-evenly;
+    
 }
 
 .clear-complete
