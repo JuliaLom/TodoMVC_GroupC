@@ -16,16 +16,16 @@ h1
 .main-grid
 {
     display: grid;
-    grid-template-columns: 2fr 1fr 2fr 1fr 2fr;
+    grid-template-columns: 2fr 3fr 2fr;
 
 }
 
 #form
 {
     display: grid;
-    grid-column: 2/5;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    background-color: rgb(238, 238, 238);
+    grid-column: 2/3;
+    grid-template-columns: 1fr 8fr 1fr;
+    background-color: white;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     outline-style: solid;
     outline-color: rgb(216, 216, 216);
@@ -42,18 +42,24 @@ h1
 
 #new-todos
 {
-    grid-column: 2/4;
+    grid-column: 2/8;
     font-size: 24px;
+    font-style: italic;
     margin-top: 16px;
     margin-bottom: 16px;
-    background-color: rgb(238, 238, 238);
+    background-color: white;
+    color: #e6e6e6;
     border: 0px solid;
 }
+
+/* font-weight: 300;
+color: #e6e6e6;
+font-style: italic; */
 
 #todo-list
 {
     display: grid;
-    grid-column: 2/5;
+    grid-column: 2/3;
     background-color: white;
     list-style-type: none;
     padding: 0px;
@@ -68,7 +74,7 @@ h1
 .todo-item
 {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 8fr 1fr;
 }
 
 .toggle-item
@@ -81,14 +87,14 @@ h1
 
 .todo-value
 {
-    grid-column: 2/4;
+    grid-column: 2;
     font-size: 24px;
     margin: 16px 0px 16px 0px;
 }
 
 .todo-remove
 {
-    grid-column: 4;
+    grid-column: 3;
     background-color: white;
     border: none;
 }
@@ -96,7 +102,7 @@ h1
 .options
 {
     display: grid;
-    grid-column: 2/5;
+    grid-column: 2/3;
     grid-template-columns: 1fr 2fr 1fr;
     background-color: white;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
