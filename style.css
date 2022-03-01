@@ -123,6 +123,25 @@ font-style: italic; */
     
 }
 
+.all
+{
+    padding: 3px 7px;
+	text-decoration: none;
+    background:none;
+    border: 1px solid transparent;
+}
+
+.all:hover
+{
+    border-color: rgba(175, 47, 47, 0.1);
+    border-radius: 5px;
+}
+
+.all:selected
+{
+    border-color: rgba(175, 47, 47, 0.2);
+}
+
 .clear-complete
 {
     grid-column: 3;
