@@ -44,12 +44,22 @@ h1
 {
     grid-column: 2/8;
     font-size: 24px;
-    font-style: italic;
     margin-top: 16px;
     margin-bottom: 16px;
     background-color: white;
-    color: #e6e6e6;
+    color: #4d4d4d;
     border: 0px solid;
+}
+
+#new-todos::placeholder
+{
+    font-style: italic;
+	font-weight: 300;
+	color: #e6e6e6;
+}
+
+#new-todos:focus {
+	outline: 0;
 }
 
 /* font-weight: 300;
@@ -89,6 +99,7 @@ font-style: italic; */
 {
     grid-column: 2;
     font-size: 24px;
+    color: #4d4d4d;
     margin: 16px 0px 16px 0px;
 }
 
