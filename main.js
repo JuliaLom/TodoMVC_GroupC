@@ -9,6 +9,9 @@ function start() {
     setSearchForm();
     ToggleAll();
     RemoveChecked();
+    ShowAll();
+    HydeCompleted();
+    HydeActive();
 }
 
 function setSearchForm() {
@@ -50,21 +53,17 @@ function ToggleAll() {
                 let checkbox = li.querySelector('.toggle-item');
                 if (ToggleAllCheckbox.checked == true) {
 
-                    /*  let checkbox = li.querySelector('.toggle-item'); */
                     checkbox.checked = true;
                     text.style.color = "grey";
                 }
                 if (ToggleAllCheckbox.checked == false) {
 
-                    /* let checkbox = li.querySelector('.toggle-item'); */
                     checkbox.checked = false;
                     text.style.color = "black";
                 }
             }
         }
-
     }
-
 }
 function CheckBox(li) {
     let checkbox = li.querySelector('.toggle-item');
@@ -79,17 +78,14 @@ function CheckBox(li) {
             checkbox.checked = false;
             text.style.color = "black";
         }
-
     }
 }
 function RemoveChecked() {
     let button = document.querySelector('.clear-complete');
 
     button.onclick = event => {
-        /* alert('hello'); */
         let ul = document.querySelector('#todo-list');
         let ListofLi = ul.querySelectorAll('li');
-        /* let checkbox = document.querySelector('.toggle-item'); */
 
         for (let li of ListofLi) {
             let checkbox = li.querySelector('.toggle-item');
@@ -97,8 +93,53 @@ function RemoveChecked() {
                 li.remove();
             }
         }
-
     }
+}
+function ShowAll() {
+    let button = document.querySelector('.all');
+    button.onclick = event => {
 
+        let ul = document.querySelector('#todo-list');
+        let ListofLi = ul.querySelectorAll('li');
+        for (let li of ListofLi) {
+            let checkbox = li.querySelector('.toggle-item');
+            li.style.display = "";
+        }
+    }
+}
+function HydeCompleted() {
+    let button = document.querySelector('.active');
+    button.onclick = event => {
+
+        let ul = document.querySelector('#todo-list');
+        let ListofLi = ul.querySelectorAll('li');
+        for (let li of ListofLi) {
+            let checkbox = li.querySelector('.toggle-item');
+            if (checkbox.checked == true) {
+                li.style.display = "none";
+            }
+            if (checkbox.checked == false) {
+                li.style.display = "";
+            }
+        }
+    }
+}
+function HydeActive() {
+    let button = document.querySelector('.complete');
+    button.onclick = event => {
+
+        let ul = document.querySelector('#todo-list');
+        let ListofLi = ul.querySelectorAll('li');
+
+        for (let li of ListofLi) {
+            let checkbox = li.querySelector('.toggle-item');
+            if (checkbox.checked == false) {
+                li.style.display = "none";
+            }
+            if (checkbox.checked == true) {
+                li.style.display = "";
+            }
+        }
+    }
 }
 
