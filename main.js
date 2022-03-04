@@ -6,6 +6,7 @@ cbutton.style.display = "none";
 let footer = document.querySelector('footer');
 footer.style.display = "none";
 let state = "All";
+let selected = 0;
 start();
 
 function start() {
@@ -30,7 +31,7 @@ function setSearchForm() {
         form.reset();
         CheckItemsLeft();
         footer.style.display = "";
-        
+
     }
 
 }
@@ -48,7 +49,7 @@ function removeTodos(li) {
     todoRemove.onclick = function (event) {
         li.remove();
         CheckItemsLeft();
-        if(CheckAmountOfItems() == 0){
+        if (CheckAmountOfItems() == 0) {
             footer.style.display = "none";
         }
     }
@@ -57,37 +58,45 @@ function ToggleAll() {
     let ToggleAllCheckbox = document.querySelector('#toggle-all');
     /* let button = document.querySelector('.clear-complete'); */
     ToggleAllCheckbox.onclick = event => {
-        
         let ul = document.querySelector('#todo-list');
         let ListofLi = ul.querySelectorAll('li');
+        if (ListofLi.length > 0) {
+            if (selected == 0) {
+                selected = 1;
+            } else {
+                selected = 0;
+            }
+        }
+
+
         if (ListofLi.length > 0) {
 
             for (let li of ListofLi) {
                 let text = li.querySelector('.todo-value');
                 let checkbox = li.querySelector('.toggle-item');
-                if (ToggleAllCheckbox.checked == true) {
+                if (selected == 1) {
 
-                    if(state == "Active"){
+                    if (state == "Active") {
                         li.style.display = "none";
                     }
-                    if(state == "All"){
+                    if (state == "All") {
                         li.style.display = "";
                     }
                     checkbox.checked = true;
                     text.style.color = "grey";
                     cbutton.style.display = "";
                 }
-                if (ToggleAllCheckbox.checked == false) {
+                if (selected == 0) {
 
-                    if(state == "Complete"){
+                    if (state == "Complete") {
                         li.style.display = "none";
                     }
-                    if(state == "All"){
+                    if (state == "All") {
                         li.style.display = "";
                     }
                     checkbox.checked = false;
                     text.style.color = "black";
-                    if(CheckCheckedAmount() == 0){
+                    if (CheckCheckedAmount() == 0) {
                         cbutton.style.display = "none";
                     }
                 }
@@ -104,25 +113,28 @@ function CheckBox(li) {
 
         if (checkbox.checked == true) {
             /* checkbox.checked = true; */
-            if(state == "Active"){
+            if (state == "Active") {
                 li.style.display = "none";
             }
-            if(state == "All"){
+            if (state == "All") {
                 li.style.display = "";
             }
             text.style.color = "grey";
+
             cbutton.style.display = "";
+
+
         }
         if (checkbox.checked == false) {
             /* checkbox.checked = false; */
             text.style.color = "black";
-            if(state == "Complete"){
+            if (state == "Complete") {
                 li.style.display = "none";
             }
-            if(state == "All"){
+            if (state == "All") {
                 li.style.display = "";
             }
-            if(CheckCheckedAmount() == 0){
+            if (CheckCheckedAmount() == 0) {
                 cbutton.style.display = "none";
             }
         }
@@ -130,8 +142,7 @@ function CheckBox(li) {
     }
 }
 function RemoveChecked() {
-    /* let button = document.querySelector('.clear-complete'); */
-
+    
     cbutton.onclick = event => {
         let ul = document.querySelector('#todo-list');
         let ListofLi = ul.querySelectorAll('li');
@@ -142,9 +153,11 @@ function RemoveChecked() {
                 li.remove();
             }
         }
-        if(CheckAmountOfItems() == 0){
+        if (CheckAmountOfItems() == 0) {
             footer.style.display = "none";
         }
+        cbutton.style.display = "none";
+        selected = 0;
     }
 }
 function ShowAll() {
@@ -213,15 +226,15 @@ function CheckCheckedAmount() {
     let ul = document.querySelector('#todo-list');
     let listOfLi = ul.querySelectorAll('li');
 
-    for(let li of listOfLi){
+    for (let li of listOfLi) {
         let checkbox = li.querySelector('.toggle-item');
-        if(checkbox.checked == true){
+        if (checkbox.checked == true) {
             amountOfChecked++;
         }
     }
     return amountOfChecked;
 }
-function CheckAmountOfItems(){
+function CheckAmountOfItems() {
     let ul = document.querySelector('#todo-list');
     let listOfLi = ul.querySelectorAll('li');
     return listOfLi.length;
