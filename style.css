@@ -131,24 +131,28 @@ font-style: italic; */
     flex-direction: row;
     list-style-type: none;
     justify-content: space-evenly;
+    color: #777;
     
 }
 
-.all
+.all, .active, .complete
 {
     padding: 3px 7px;
 	text-decoration: none;
     background:none;
     border: 1px solid transparent;
+    color: #777;
+    font:inherit;
+    font-size: 14px;
 }
 
-.all:hover
+.all:hover, .active:hover, .complete:hover
 {
     border-color: rgba(175, 47, 47, 0.1);
     border-radius: 5px;
 }
 
-.all:selected
+.all:selected, .active:selected, .complete:selected
 {
     border-color: rgba(175, 47, 47, 0.2);
 }
