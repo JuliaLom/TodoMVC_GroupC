@@ -32,7 +32,10 @@ h1 {
     grid-column: 1;
     justify-self: center;
     align-self: center;
-    transform: scale(2);
+    transform: scale(1.5);
+    padding: 0;
+    border: none;
+    background: none;
 }
 
 #new-todos {
@@ -106,8 +109,14 @@ font-style: italic; */
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.todo-count {
+.items-left {
     grid-column: 1;
+    align-items: center;
+    justify-items: center;
+    color: #777;
+    font-size: 14px;
+    margin-top: 12px;
+    margin-left: 12px;
 }
 
 .filter-button {
@@ -117,6 +126,9 @@ font-style: italic; */
     list-style-type: none;
     justify-content: space-evenly;
     color: #777;
+    margin-top: 9px;
+    margin-bottom: 9px;
+    
 
 }
 
@@ -141,6 +153,16 @@ font-style: italic; */
 
 .clear-complete {
     grid-column: 3;
+    padding: 0;
+    border: none;
+    background: none;
+    color: #777;
+    font: inherit;
+    font-size: 14px;
+}
+
+.clear-complete:hover {
+    text-decoration: underline;
 }
 
 .info {
