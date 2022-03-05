@@ -155,12 +155,6 @@ font-style: italic; */
     border-radius: 3px;
 }
 
-.all:active
-{
-    border-color: rgba(175, 47, 47, 0.2);
-    border-radius: 3px;
-}
-
 .clear-complete {
     grid-column: 3;
     padding: 0;
