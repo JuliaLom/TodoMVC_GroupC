@@ -83,7 +83,8 @@ function ToggleAll() {
                         li.style.display = "";
                     }
                     checkbox.checked = true;
-                    text.style.color = "grey";
+                    text.style.color = "#e6e6e6";
+                    text.style.textDecoration = "line-through"
                     cbutton.style.display = "";
                 }
                 if (selected == 0) {
@@ -95,7 +96,8 @@ function ToggleAll() {
                         li.style.display = "";
                     }
                     checkbox.checked = false;
-                    text.style.color = "black";
+                    text.style.color = "#4d4d4d";
+                    text.style.textDecoration = "none"
                     if (CheckCheckedAmount() == 0) {
                         cbutton.style.display = "none";
                     }
@@ -119,7 +121,8 @@ function CheckBox(li) {
             if (state == "All") {
                 li.style.display = "";
             }
-            text.style.color = "grey";
+            text.style.color = "#e6e6e6";
+            text.style.textDecoration = "line-through"
 
             cbutton.style.display = "";
 
@@ -127,7 +130,8 @@ function CheckBox(li) {
         }
         if (checkbox.checked == false) {
             /* checkbox.checked = false; */
-            text.style.color = "black";
+            text.style.color = "#4d4d4d";
+            text.style.textDecoration = "none"
             if (state == "Complete") {
                 li.style.display = "none";
             }
