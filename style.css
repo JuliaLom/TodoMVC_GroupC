@@ -17,7 +17,7 @@ h1 {
 
 }
 
-#form {
+.new-todos-grid {
     display: grid;
     grid-column: 2/3;
     grid-template-columns: 1fr 8fr 1fr;
