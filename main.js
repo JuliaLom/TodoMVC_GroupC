@@ -142,7 +142,7 @@ function CheckBox(li) {
     }
 }
 function RemoveChecked() {
-    
+
     cbutton.onclick = event => {
         let ul = document.querySelector('#todo-list');
         let ListofLi = ul.querySelectorAll('li');
