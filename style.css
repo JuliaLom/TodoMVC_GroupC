@@ -18,6 +18,7 @@ h1 {
 }
 
 .new-todos-grid {
+    
     display: grid;
     grid-column: 2/3;
     grid-template-columns: 1fr 8fr 1fr;
@@ -107,6 +108,7 @@ font-style: italic; */
     grid-template-columns: 1fr 2fr 1fr;
     background-color: white;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2), 0px 4px 8px rgba(0, 0, 0, 0.2);
+    gap: 10%;
 }
 
 .items-left {
@@ -128,6 +130,7 @@ font-style: italic; */
     color: #777;
     margin-top: 9px;
     margin-bottom: 9px;
+    padding: 0px;
     
 
 }
@@ -147,8 +150,9 @@ font-style: italic; */
     border-radius: 5px;
 }
 
-.all:selected, .active:selected, .complete:selected {
+.all:active, .active:active, .complete:active {
     border-color: rgba(175, 47, 47, 0.2);
+    border-radius: 5px;
 }
 
 .clear-complete {
