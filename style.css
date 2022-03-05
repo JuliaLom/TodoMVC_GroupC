@@ -147,12 +147,12 @@ font-style: italic; */
 
 .all:hover, .active:hover, .complete:hover {
     border-color: rgba(175, 47, 47, 0.1);
-    border-radius: 5px;
+    border-radius: 6px;
 }
 
-.all:active, .active:active, .complete:active {
+.all:focus, .active:focus, .complete:focus {
     border-color: rgba(175, 47, 47, 0.2);
-    border-radius: 5px;
+    border-radius: 6px;
 }
 
 .clear-complete {
