@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "C:\\Users\\zanga\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\zanga\\.nuget\\packages"
+    ]
+  }
+}
